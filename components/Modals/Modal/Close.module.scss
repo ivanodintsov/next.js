@@ -1,0 +1,23 @@
+.root {
+  color: $black;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 24px;
+
+  &:focus-visible {
+    box-shadow: 0 0 0 1px black;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .root {
+    padding-bottom: 0;
+    padding-left: 0;
+
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+  }
+}

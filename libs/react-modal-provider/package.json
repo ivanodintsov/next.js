@@ -1,0 +1,34 @@
+{
+  "name": "react-modal-provider",
+  "version": "1.0.0",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "types": "./lib/esm/index.d.ts",
+  "repository": "git@github.com:ivanodintsov/react-modal-provider.git",
+  "author": "Ivan Odyntsov <ivan@odintsov.me>",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn build:esm && yarn build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir lib/cjs",
+    "dev:esm": "tsc-watch --noClear"
+  },
+  "files": [
+    "/lib"
+  ],
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.19",
+    "@types/react-dom": "^17.0.9",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "tsc-watch": "^4.5.0",
+    "typescript": "^4.4.2"
+  },
+  "dependencies": {
+    "eventemitter3": "^4.0.7"
+  }
+}

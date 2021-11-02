@@ -1,0 +1,12 @@
+button {
+  display: block;
+  outline: none;
+  appearance: none;
+  background: none;
+  border: 0;
+  padding: 0;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}

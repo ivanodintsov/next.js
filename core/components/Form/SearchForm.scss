@@ -1,0 +1,170 @@
+// форма поиска в лк
+.search-form {
+  justify-content: flex-start;
+  align-items: flex-end;
+  display: flex;
+  margin-top: 1.875rem;
+}
+
+// ввод телефона
+.search-form__phone-container {
+  margin-right: 1.25rem;
+  width: 12.375rem;
+}
+
+// ввод почты
+.search-form__email-container {
+  margin-right: 1.25rem;
+  width: 12.375rem;
+}
+
+// количество участников
+.search-form__users-count-container {
+  width: 8.125rem;
+}
+
+.search-form__users-count {
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  padding-left: .625rem;
+  height: 2.25rem;
+  background-color: #e3e3e3;
+  font-family: font-bold;
+}
+
+// bootstrap select
+.search-form__select-container {
+  margin-right: 1.25rem;
+  width: 12.5rem;
+
+  .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: 100%;
+  }
+
+
+  .ds-select__open-button {
+    padding-left: .75rem;
+  }
+}
+
+// ввод даты
+.search-form__date-container {
+  position: relative;
+  width: 15.625rem;
+
+  input {
+    padding-right: 2.125rem;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: .5625rem;
+    bottom: .5625rem;
+    display: block;
+    width: 1.1875rem;
+    height: 1.1875rem;
+    background-image: url("/images/calendar-icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+  }
+}
+
+// кнопка
+.search-form__submit-button {
+  margin-left: auto;
+  width: 8.25rem;
+}
+
+// tablet
+@media screen and (tablet1), (tablet2) {
+  // форма поиска в лк
+  .search-form {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    display: flex;
+    margin-top: .625rem;
+  }
+
+  // ввод телефона
+  .search-form__phone-container {
+    margin-top: 1.25rem;
+    margin-right: 0;
+    width: 15.125rem;
+  }
+
+  // ввод почты
+  .search-form__email-container {
+    margin-top: 1.25rem;
+    margin-right: 0;
+    width: 15.125rem;
+  }
+
+  // количество участников
+  .search-form__users-count-container {
+    margin-top: 10px;
+    width: 15.125rem;
+  }
+
+  // bootstrap select
+  .search-form__select-container {
+    margin-top: 1.25rem;
+    margin-right: 0;
+    width: 15.125rem;
+  }
+
+  // ввод даты
+  .search-form__date-container {
+    position: relative;
+    margin-top: 1.25rem;
+    width: 15.125rem;
+  }
+
+  // кнопка
+  .search-form__submit-button {
+    margin-top: 1.25rem;
+  }
+}
+
+// mobile
+@media screen and (mobile1), (mobile2) {
+  // ввод телефона
+  .search-form__phone-container {
+    margin-top: .5rem;
+    width: 100%;
+  }
+
+  // ввод почты
+  .search-form__email-container {
+    margin-top: .5rem;
+    width: 100%;
+  }
+
+  // количество участников
+  .search-form__users-count-container {
+    margin-top: .5rem;
+    width: 100%;
+  }
+
+  // bootstrap select
+  .search-form__select-container {
+    margin-top: .5rem;
+    width: 100%;
+  }
+
+  // ввод даты
+  .search-form__date-container {
+    margin-top: .5rem;
+    width: 100%;
+  }
+
+  // кнопка
+  .search-form__submit-button {
+    margin-top: 1.25rem;
+    width: 100%;
+  }
+}

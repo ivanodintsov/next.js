@@ -1,0 +1,232 @@
+{
+  "custom_validation": {
+    "required": {
+      "code": "Вы не заполнили поле «Пароль»",
+      "sex": "Выберите пол",
+      "city": "Выберите город из списка.",
+      "email": "Вы не заполнили обязательное поле «E-mail».",
+      "full_name": "Введите свое ФИО",
+      "first_name": "Вы не заполнили обязательное поле «Имя».",
+      "surname": "Вы не заполнили обязательное поле «Фамилия».",
+      "name": "Введите свое имя",
+      "password": "Допустимая длина — 5–20 символов, можно использовать только латиницу и цифры",
+      "password2": "Допустимая длина — 5–20 символов, можно использовать только латиницу и цифры",
+      "set_password": "Допустимая длина — 5–20 символов, можно использовать только латиницу и цифры",
+      "sign_up_password": "$t(custom_validation.required.set_password)",
+      "old_password": "Введите старый пароль",
+      "new_password": "$t(custom_validation.required.set_password)",
+      "repeat_password": "Введите пароль еще раз",
+      "files": "Выберите фото чеков",
+      "phone": "Вы не заполнили поле \"Номер телефона\".",
+      "captcha": "$t(custom_validation.required.default)",
+      "subject": "Укажите тему",
+      "message": "Расскажите, что случилось",
+      "default": "Вы не заполнили поле \"{{field_name}}\"",
+      "default2": "Вы не заполнили поле \"{{field_name}}\"",
+      "link": "$t(custom_validation.required.default2)",
+      "date": "$t(custom_validation.required.default2)",
+      "time": "$t(custom_validation.required.default2)",
+      "i": "$t(custom_validation.required.default2)",
+      "fn": "$t(custom_validation.required.default2)",
+      "fp": "$t(custom_validation.required.default2)",
+      "s": "$t(custom_validation.required.default2)",
+      "store": "$t(custom_validation.required.default2)",
+      "prize_category_id": "$t(custom_validation.required.default2)",
+      "birth_d": "Введите свой день рождения",
+      "birth_m": "Введите свой месяц рождения",
+      "birth_y": "Введите свой год рождения",
+      "passport_number": "Введите номер паспорта",
+      "passport_series": "Введите серию паспорта",
+      "inn": "Введите правильный ИНН",
+      "passport_issued_by": "Укажите кем выдан",
+      "passport_issued_at_d": "Введите день",
+      "passport_issued_at_m": "Введите месяц",
+      "passport_issued_at_y": "Введите год",
+      "passport_city": "Введите город регистрации",
+      "passport_address": "Введите адрес регистрации",
+      "passport_files": "Загрузите файлы",
+      "birthplace": "Введите место рождения",
+      "department_code": "Введите код подразделения",
+      "patronymic": "Введите свое отчество",
+      "delivery_city": "Введите город доставки",
+      "delivery_address": "Введите адрес доставки",
+      "photo": "Выберите фотографию"
+    },
+    "checkbox": {
+      "processing_agreement": "Для регистрации Вы должны быть согласны, проставьте «галочку» для подтверждения.",
+      "rules_agreement": "Для регистрации Вы должны быть согласны, проставьте «галочку» для подтверждения.",
+      "personal_agreement": "Подтвердите согласие с Политикой конфиденциальности",
+      "age_agreement": "Для участия в акции, согласно правилам акции, вам должно быть больше 18 лет."
+    },
+    "min_max": {
+      "surname": "Поле «$t({{field_name}})» может состоять из латиницы, кириллицы, тире и пробела. Длина от {{min}} до {{max}} символов.",
+      "first_name": "Поле «$t({{field_name}})» может состоять из латиницы, кириллицы, тире и пробела. Длина от {{min}} до {{max}} символов."
+    },
+    "text": {
+      "surname": "Поле «$t({{field_name}})» может состоять из латиницы, кириллицы, тире и пробела. Длина от {{min}} до {{max}} символов.",
+      "first_name": "Поле «$t({{field_name}})» может состоять из латиницы, кириллицы, тире и пробела. Длина от {{min}} до {{max}} символов."
+    },
+    "fileSizeSingle": {
+      "files": "«Фото» должно соответствовать следующему формату: .JPG, .JPEG, .BMP, .PNG, до 2048px, не более 10 Мбайт."
+    },
+    "password": {
+      "password": "$t(custom_validation.required.password)",
+      "set_password": "$t(custom_validation.required.set_password)",
+      "old_password": "$t(custom_validation.required.set_password)",
+      "new_password": "$t(custom_validation.required.password2)",
+      "repeat_password": "$t(custom_validation.required.password2)",
+      "sign_up_password": "$t(custom_validation.required.set_password)"
+    },
+    "notType": {
+      "city": "Выберите город из списка."
+    }
+  },
+
+  "profile": {
+    "title": "Личный кабинет"
+  },
+
+  "change_password": {
+    "title": "Изменить пароль"
+  },
+
+  "sign_up": {
+    "title": "заполни данные"
+  },
+
+  "feedback": {
+    "title": "Обратная связь"
+  },
+
+  "confirm_email": {
+    "title": "Подтверждение по e-mail",
+    "text": "Для подтверждения e-mail Вам была отправлена\nссылка активации"
+  },
+
+  "auth_modal": {
+    "title": "чтобы участвовать в акции,<0/>необходимо",
+    "buttons": "<0>Зарегистрироваться</0><1>Авторизоваться</1>"
+  },
+
+  "receipts_table": {
+    "columns": {
+      "date": "Дата/время загрузки чека",
+      "status": "Статус",
+      "prize": "Приз"
+    }
+  },
+
+  "fields": {
+    "captcha": {
+      "label": "Я не робот"
+    }
+  },
+
+  "sign_in": {
+    "title": "Вход в личный кабинет"
+  },
+
+  "faq": {
+    "title": "FAQ"
+  },
+
+  "reset_password": {
+    "title": "Восстановление пароля",
+    "modal": {
+      "success": {
+        "title": "Новый пароль отправлен",
+        "message": "Проверьте свою почту"
+      }
+    }
+  },
+
+  "user_data": {
+    "title": "Персональные данные",
+    "name": "Имя",
+    "email": "E-mail",
+    "phone": "Мобильный телефон",
+    "city": "Город"
+  },
+
+  "validations": {
+    "required": "$t(custom_validation.required.{{path}})",
+    "required_default": "Вы не заполнили поле",
+    "min": "Минимальная длинна {{min}}",
+    "max": "Максимальная длинна {{max}}",
+    "min_max": "Длина — {{min}}–{{max}} символов",
+    "checkbox": "$t(custom_validation.checkbox.{{path}})",
+    "phone_ru": "Номер телефона должен начинаться с цифры 7, в формате 7XXXXXXXXXXX",
+    "personal_inn_ru": "Введите правильный ИНН",
+    "ru_one": "Пишите латиницей или кириллицей, допустимы дефисы и пробелы",
+    "ru_two": "Поле может состоять из кириллицы",
+    "date_one": "Введите дату в формате ДД.ММ.ГГГГ",
+    "email": "E-mail должен быть в формате: ххх@xxx.xx",
+    "password": "$t(custom_validation.password.{{path}})",
+    "password_equal": "Пароли не совпадают",
+    "num_one": "Поле может состоять из цифр и пробелов",
+    "ext": "Файл {{fileName}} имеет недопустимый тип",
+    "fileSize": "Общий размер фвйлов {{size}}КБ превышает допустимые {{max}}КБ",
+    "integer": "Поле должно содержать целое число",
+    "positive": "Поле должно содержать положительное число",
+    "max_number": "Максимально допустимое число {{max}}",
+    "min_number": "Минимально допустимое число {{min}}",
+    "notType": "Значение должно быть $t(validations.types.{{type}})",
+    "date": "Введите дату в формате {{format}}",
+    "link": "Поле должно содержать ссылку",
+    "types": {
+      "number": "числом",
+      "string": "строкой"
+    }
+  },
+
+  "weeks": ["вс", "пн", "вт", "ср", "чт", "пт", "сб"],
+
+  "months": [
+    "Янв",
+    "Фев",
+    "Мар",
+    "Апр",
+    "Май",
+    "Июн",
+    "Июл",
+    "Авг",
+    "Сен",
+    "Окт",
+    "Ноя",
+    "Дек"
+  ],
+
+  "meta": {
+    "/": {
+      "title": "Главная страница"
+    }
+  },
+
+  "api": {
+    "exceptions": {},
+    "/user/update": {
+      "messages": {
+        "The given data was invalid.": "Указанные данные были неверными"
+      }
+    },
+    "/user": {
+      "messages": {
+        "default": "Добро пожаловать!"
+      }
+    },
+    "/auth/login": {
+      "messages": {
+        "Неверный пароль или телефон": "Неверный пароль или логин"
+      }
+    },
+    "default": {
+      "messages": {
+        "unknown": "Неизвестная ошибка"
+      },
+      "errors": {
+        "The email field is required.": "Вы не заполнили поле E-mail",
+        "The password field is required.": "Вы не заполнили поле Пароль"
+      }
+    }
+  }
+}

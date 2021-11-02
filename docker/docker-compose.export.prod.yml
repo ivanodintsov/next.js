@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  frontend:
+    image: node:14.16.1-alpine3.10
+    tty: true
+    stdin_open: true
+    logging:
+      driver: 'json-file'
+      options:
+        max-size: '10m'
+        max-file: '3'
+
+    working_dir: /usr/src/app
+    volumes:
+      - ../:/usr/src/app
+      - ../node_modules:/usr/src/app/node_modules
+      - /usr/src/app/.next
+    ports:
+      - 3000:3000
+
+    command: /bin/sh -c "yarn install && yarn export:prod"

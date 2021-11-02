@@ -1,0 +1,51 @@
+.root {
+  position: relative;
+
+  :global {
+    @import 'swiper/swiper.scss';
+
+    .swiper-container {
+      overflow: initial;
+    }
+
+    .swiper-slide {
+      transform-origin: center right;
+    }
+
+    .swiper-slide-active,
+    .swiper-slide-next {
+      + .swiper-slide {
+        transform-origin: center left;
+      }
+    }
+
+    .swiper-slide-active {
+      transform-origin: center center;
+    }
+  }
+}
+
+.control {
+  padding: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 12;
+  height: 40px;
+  width: 40px;
+  color: $dark_blue;
+}
+
+.arrows {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.prevControl {
+  left: 3px;
+}
+
+.nextControl {
+  right: 3px;
+}

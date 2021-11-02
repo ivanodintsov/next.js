@@ -1,0 +1,84 @@
+.ds-form {
+  display: block;
+  margin-top: 3.125rem;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 20.625rem;
+}
+
+.ds-form__submit-button {
+  margin-top: 3.125rem;
+  margin-right: auto;
+  margin-left: auto;
+  width: 13rem;
+}
+
+// форма логина
+.login-form {
+
+  .ds-form__submit-button {
+    margin-top: 1.375rem;
+  }
+}
+
+// форма восст пароля
+.captcha-wrapper,
+.capcha-container {
+  width: 12.5rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.capcha-container {
+  margin-top: 1.5rem;
+  margin-right: auto;
+  margin-left: auto;
+  height: 3.5rem;
+  position: relative;
+
+  .capcha-container__image {
+    width: 100%;
+    height: auto;
+  }
+  > div > div > div {
+    position: absolute;
+    transform: translateX(-50%) scale(0.65);
+    left: 50%;
+    transform-origin: top center;
+  }
+}
+
+.pass-recovery-form {
+
+  .ds-form__submit-button {
+    margin-top: 1.75rem;
+  }
+}
+
+// форма обр связи для гостя
+.feedback-guest-form {
+
+  .ds-checkbox {
+    margin-top: .5rem;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 15rem;
+  }
+
+  .ds-form__submit-button {
+    margin-top: 1.75rem;
+  }
+}
+
+// форма копировать ссылку
+.link-form {
+  margin-top: 0;
+  width: 21.25rem;
+
+  .ds-form__copy-link-button {
+    margin-top: 1.875rem;
+    margin-right: auto;
+    margin-left: auto;
+    width: 13.125rem;
+  }
+}

@@ -1,0 +1,8 @@
+.root {
+  :global {
+    .valid-feedback,
+    .invalid-feedback {
+      display: none;
+    }
+  }
+}

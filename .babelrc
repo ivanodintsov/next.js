@@ -1,0 +1,21 @@
+{
+  "presets": ["next/babel"],
+  "plugins": [
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    "@babel/plugin-transform-react-constant-elements",
+    "ramda",
+    "lodash"
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        ["transform-react-remove-prop-types", {
+          "mode": "remove",
+          "removeImport": true
+        }],
+        "ramda",
+        "lodash"
+      ]
+    }
+  }
+}

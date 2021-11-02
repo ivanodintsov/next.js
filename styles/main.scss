@@ -1,0 +1,19 @@
+@import 'react-toastify/dist/ReactToastify.css';
+@import 'app.scss';
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#__next {
+  width: 100%;
+  overflow: hidden;
+}

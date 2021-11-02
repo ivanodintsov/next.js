@@ -1,0 +1,232 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/mixins';
+@import '~styles/settings';
+
+// =============================================================================
+// String Replace
+// =============================================================================
+
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace +
+      str-replace(
+        str-slice($string, $index + str-length($search)),
+        $search,
+        $replace
+      );
+  }
+
+  @return $string;
+}
+
+// =============================================================================
+// Font Face
+// =============================================================================
+
+@mixin font-face(
+  $name,
+  $path,
+  $weight: null,
+  $style: null,
+  $exts: eot woff2 woff ttf svg
+) {
+  $src: null;
+
+  $extmods: (
+    eot: '?',
+    svg: '#' + str-replace($name, ' ', '_'),
+  );
+
+  $formats: (
+    otf: 'opentype',
+    ttf: 'truetype',
+  );
+
+  @each $ext in $exts {
+    $extmod: if(
+      map-has-key($extmods, $ext),
+      $ext + map-get($extmods, $ext),
+      $ext
+    );
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append(
+      $src,
+      url(quote($path + '.' + $extmod)) format(quote($format)),
+      comma
+    );
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+    font-display: swap;
+  }
+}
+
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
+
+@mixin reset-button {
+  display: inline-block;
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  background: transparent;
+  font-family: sans-serif;
+  line-height: 1;
+  cursor: pointer;
+  text-align: center;
+  appearance: none;
+}
+
+@mixin web-h3 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 28px;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
+@mixin web-text-2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@mixin secondary-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+@mixin web-text-extra-large {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 40px;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 18px;
+    line-height: 29px;
+  }
+}
+
+@mixin web-text-small {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+
+  @include media-breakpoint-down(lg) {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 8px;
+    line-height: 11px;
+  }
+}
+
+@mixin web-h4 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+@mixin web-button {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+}
+
+@mixin web-heading-18 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 120%;
+
+  @include media-breakpoint-down(lg) {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@mixin mob-h2 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.33;
+  letter-spacing: 0.1px;
+}
+
+@mixin sub-h1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 148%;
+}
+
+@mixin sub-h2 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@mixin mob-sub-h2 {
+  @include sub-h2;
+  letter-spacing: 0.3px;
+}
+
+@mixin mob-sub-h1 {
+  @include sub-h1;
+}
+
+@mixin mob-text-main {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 127.68%;
+  letter-spacing: -0.005em;
+}
