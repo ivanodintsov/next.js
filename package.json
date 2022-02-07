@@ -74,6 +74,8 @@
     "less": "^3.11.1",
     "lodash": "^4.17.20",
     "marked": "^0.8.0",
+    "mobx": "^6.3.13",
+    "mobx-react-lite": "^3.2.3",
     "moment": "^2.24.0",
     "next": "^10.0.4",
     "next-compose-plugins": "^2.2.0",
